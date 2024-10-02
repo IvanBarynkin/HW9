@@ -32,10 +32,13 @@ public class Main {
 
         System.out.println("_______Задача №3_______");
 
+        spendingMonth = 0;
         for (int j : spendingWeek) {
             spendingMonth += j;
         }
-        System.out.println("Средняя еженедельная сумма затрат составила: " + spendingMonth / spendingWeek.length + " рублей.");
+
+        double averageSpending =  (double) spendingMonth / spendingWeek.length;
+        System.out.println("Средняя еженедельная сумма затрат составила: " + averageSpending + " рублей.");
         System.out.println();
 
         System.out.println("_______Задача №4_______");
