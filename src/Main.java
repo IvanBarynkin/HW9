@@ -15,19 +15,19 @@ public class Main {
         System.out.println();
 
         System.out.println("_______Задача №2_______");
+        int min = spendingWeek[0];
+        int max = spendingWeek[0];
 
-        for (int i = 0; i < spendingWeek.length - 1; ) {
-            if (spendingWeek[i + 1] < spendingWeek[i]) {
-                int box = spendingWeek[i];
-                spendingWeek[i] = spendingWeek[i + 1];
-                spendingWeek[i + 1] = box;
-                i = 0;
-            } else {
-                i++;
+        for (int i = 0; i < spendingWeek.length - 1; i++) {
+            if (max < spendingWeek[i + 1]) {
+                max = spendingWeek[i + 1];
+            }
+            if (min > spendingWeek[i + 1]) {
+                min = spendingWeek[i + 1];
             }
         }
 
-        System.out.println("Минимальная сумма затрат за месяц " + spendingWeek[0] + " рублей , а максимальная " + spendingWeek[spendingWeek.length - 1] + " рублей.");
+        System.out.println("Минимальная сумма затрат за месяц " + min + " рублей , а максимальная " + max + " рублей.");
         System.out.println();
 
         System.out.println("_______Задача №3_______");
